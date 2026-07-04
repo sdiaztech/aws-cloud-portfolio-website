@@ -131,7 +131,7 @@ header .logo a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../media/coding.jpeg") center / cover fixed no-repeat;
+    background: url("../media/coding.jpeg") center / cover no-repeat;
     opacity: 0.9;
     z-index: 1;
 }
@@ -304,6 +304,15 @@ header .logo a:hover {
     font-style: italic;
 }
 
+.nested-credential {
+    display: block;
+    margin: 0.35rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    font-style: normal;
+}
+
 .education ul,
 .certifications ul {
     list-style: none;
@@ -458,8 +467,11 @@ footer {
         padding: 10px;
     }
 
-    header nav ul {
-        display: none;
+    .nav-links {
+        gap: 0.75rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .logo {
@@ -475,8 +487,18 @@ footer {
     }
 
     .contact-item {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-options {
+        justify-content:center;
+    }
+    
+    #home::before {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
     }
 
     #home .container {
@@ -512,5 +534,13 @@ footer {
 
     #skills ul {
         grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 0.15rem 2rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
     }
 }
