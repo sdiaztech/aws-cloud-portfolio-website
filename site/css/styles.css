@@ -34,7 +34,7 @@ h4 {
     font-size: 1em;
 }
 
-h5{
+h5 {
     font-size: 0.80em;
 }
 
@@ -153,14 +153,12 @@ header .logo a:hover {
 /* About */
 #about {
     padding: 2.5rem 1.25rem;
-    text-align: center;
 }
 
 /* Skills */
 #skills {
     background: #ddd;
     padding: 4rem 1.25rem;
-    text-align: center;
 }
 
 #skills ul {
@@ -360,7 +358,6 @@ header .logo a:hover {
     position: relative;
     z-index: 3;
     width: 80%;
-    margin: 0 auto;
     padding: 30px;
     max-width: 1000px;
     border-radius: 10px;
