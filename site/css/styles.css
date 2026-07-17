@@ -132,23 +132,39 @@ header {
 }
 
 /* Navigation */
+.site-nav {
+    width: min(900px, 100%);
+}
+
 .nav-links {
     display: flex;
-    gap: 1.25rem;
+    justify-content: space-between;
+    gap: 1rem;
     margin: 0;
 }
 
 .nav-links a {
     display: inline-block;
+    padding: 0.65rem 0.9rem;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-    transform: scale(1.2);
-    color: #ccc;
+    transform: translateY(-2px);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 769px) {
+    .nav-links a.is-active {
+        color: #fff;
+        background: var(--color-primary);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+    }
 }
 
 .nav-toggle {
@@ -251,7 +267,36 @@ header {
 }
 
 #about .container {
-    max-width: 780px;
+    max-width: 1050px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.about-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: calc(var(--radius) + 8px);
+    box-shadow: var(--shadow);
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    max-width: 62ch;
 }
 
 /* Skills */
@@ -425,6 +470,10 @@ header {
     overflow: hidden;
 }
 
+#credentials .container {
+    width: min(1440px, 100%);
+}
+
 .education h3,
 .certifications h3 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -441,29 +490,54 @@ header {
 
 .education,
 .certifications {
-    width: 40%;
-    padding: 2rem;
+    flex: 1;
+    width: auto;
+    max-width: 700px;
+    padding: 2.5rem;
     background: var(--color-surface);
     border: 1px solid #e5e7eb;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    line-height: 1.4;
+    font-size: 1.25rem;
+    line-height: 1.45;
 }
 
 .education span,
 .certifications span {
     display: block;
     margin-top: 0.25rem;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     color: #666;
     font-style: italic;
 }
 
+.credential-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.credential-date {
+    flex-shrink: 0;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
 .nested-credential {
     margin: 0.35rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #333;
+    font-style: normal;
+}
+
+.nested-credential span {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
     font-style: normal;
 }
 
@@ -622,6 +696,47 @@ footer p {
     color: var(--color-primary);
 }
 
+/* Error page */
+.error-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 1.25rem;
+    color: #fff;
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.35), transparent 45%),
+        var(--color-dark);
+}
+
+.error-card {
+    width: min(620px, 100%);
+    padding: clamp(2rem, 7vw, 4rem);
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: calc(var(--radius) + 8px);
+    box-shadow: var(--shadow);
+}
+
+.error-code {
+    margin: 0;
+    color: #93c5fd;
+    font-size: clamp(4rem, 18vw, 8rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+}
+
+.error-card h1 {
+    margin: 1.25rem 0 0.75rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.error-card p:not(.error-code) {
+    margin: 0;
+    color: #cbd5e1;
+}
+
 /* Animations */
 @keyframes slideInFromLeft {
     from {
@@ -756,6 +871,20 @@ footer p {
     #home .hero-focus {
         flex-wrap: wrap;
         row-gap: 0.35rem;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .about-photo {
+        width: min(280px, 100%);
+    }
+
+    .about-content {
+        text-align: center;
     }
 
     .side-by-side {

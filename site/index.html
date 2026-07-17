@@ -53,10 +53,15 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I'm driven by continuous learning across software, cybersecurity, and data science. I continuously explore different areas of computing and enjoy understanding how systems work.</p>
-            <p>This portfolio highlights my professional experience, technical projects, education, and certifications as I continue growing throughout my career.</p>
-            <a href="media/tech-resume-samuel-diaz.pdf" class="btn" download>Download Resume</a>
+            <div class="about-layout">
+                <img class="about-photo" src="media/professional-headshot-samuel-diaz.webp" alt="Professional portrait of Samuel Diaz" loading="lazy" decoding="async" width="1000" height="750">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>I'm driven by continuous learning across software, cybersecurity, and data science. I continuously explore different areas of computing and enjoy understanding how systems work.</p>
+                    <p>This portfolio highlights my professional experience, technical projects, education, and certifications as I continue growing throughout my career.</p>
+                    <a href="media/tech-resume-samuel-diaz.pdf" class="btn" download>Download Resume</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -127,31 +132,55 @@
                     <h3>Education</h3>
                     <ul>
                         <li>
-                            <strong>Master of Science (MS), Information Systems</strong>
-                            <div class="nested-credential">Graduate Certificate in Data Science <em>(2025)</em></div>
-                            <span>San Diego State University <em>(Expected 2026)</em></span>
+                            <div class="credential-heading">
+                                <strong>MS, Information Systems</strong>
+                                <time class="credential-date" datetime="2026">Expected 2026</time>
+                            </div>
+                            <div class="nested-credential credential-heading">
+                                <span>Graduate Certificate in Data Science</span>
+                                <time class="credential-date" datetime="2025">2025</time>
+                            </div>
+                            <span>San Diego State University</span>
                         </li>
                         <li>
-                            <strong>Bachelor of Science (BS), Computer Science</strong>
-                            <span>Western Governors University <em>(2024)</em></span>
+                            <div class="credential-heading">
+                                <strong>BS, Computer Science</strong>
+                                <time class="credential-date" datetime="2024">2024</time>
+                            </div>
+                            <span>Western Governors University</span>
                         </li>
                         <li>
-                            <strong>Bachelor of Science in Business Administration (BSBA), Information Systems</strong>
-                            <span>San Diego State University <em>(2022)</em></span>
+                            <div class="credential-heading">
+                                <strong>BSBA, Information Systems</strong>
+                                <time class="credential-date" datetime="2022">2022</time>
+                            </div>
+                            <span>San Diego State University</span>
                         </li>
                     </ul>
                 </div>
                 <div class="certifications reveal-card reveal-right">
-                    <h3>Professional Certifications</h3>
+                    <h3>Certificates</h3>
                     <ul>
-                        <li><strong>Google Cloud Computing Foundations</strong>
-                            <span>Google Cloud <em>(2025)</em></span>
+                        <li>
+                            <div class="credential-heading">
+                                <strong>Google Cloud Computing Foundations</strong>
+                                <time class="credential-date" datetime="2025">2025</time>
+                            </div>
+                            <span>Google Cloud</span>
                         </li>
-                        <li><strong>CompTIA Security+</strong>
-                            <span>CompTIA <em>(2024)</em></span>
+                        <li>
+                            <div class="credential-heading">
+                                <strong>CompTIA Security+</strong>
+                                <time class="credential-date" datetime="2024">2024</time>
+                            </div>
+                            <span>CompTIA</span>
                         </li>
-                        <li><strong>Linux Essentials</strong>
-                            <span>Linux Professional Institute <em>(2024)</em></span>
+                        <li>
+                            <div class="credential-heading">
+                                <strong>Linux Essentials</strong>
+                                <time class="credential-date" datetime="2024">2024</time>
+                            </div>
+                            <span>Linux Professional Institute</span>
                         </li>
                     </ul>
                     <p>
@@ -289,6 +318,28 @@
         }, { threshold: 0.2 });
 
         revealCards.forEach((card) => revealObserver.observe(card));
+
+        const observedSections = document.querySelectorAll('main section[id]:not(#home)');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                navLinks.forEach((link) => {
+                    const isCurrent = link.getAttribute('href') === `#${entry.target.id}`;
+                    link.classList.toggle('is-active', isCurrent);
+
+                    if (isCurrent) {
+                        link.setAttribute('aria-current', 'location');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            });
+        }, { rootMargin: '-35% 0px -55% 0px' });
+
+        observedSections.forEach((section) => sectionObserver.observe(section));
     </script>
 </body>
 </html>
