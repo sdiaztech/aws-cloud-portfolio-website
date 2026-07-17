@@ -496,6 +496,30 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    #projects {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #projects .container {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    #projects .project {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    #projects .project p {
+        margin: 0.75rem 0;
+        line-height: 1.5;
+    }
+
+    #projects .btn {
+        margin-top: 0.5rem;
+    }
+
     footer {
         padding: 0.15rem 1rem;
     }
