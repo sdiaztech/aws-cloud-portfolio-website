@@ -101,9 +101,7 @@ header .logo a:hover {
 .nav-links {
     display: flex;
     gap: 1.25rem;
-    list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
@@ -166,7 +164,6 @@ header .logo a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin: 0 auto;
-    padding: 0;
     max-width: 900px;
 }
 
@@ -303,7 +300,6 @@ header .logo a:hover {
 }
 
 .nested-credential {
-    display: block;
     margin: 0.35rem 0;
     font-size: 1rem;
     font-weight: 600;
@@ -313,9 +309,7 @@ header .logo a:hover {
 
 .education ul,
 .certifications ul {
-    list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .education li,
@@ -392,37 +386,22 @@ header .logo a:hover {
 
 /* Footer */
 footer {
-    background: #222;
-    color: #fff;
-    padding: 0.5rem 2rem;
+    background: #eee;
+    color: #777;
+    padding: 0.25rem 2rem;
+    font-size: 0.75rem;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-.contact-options {
-    display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    text-align: center;
 }
 
-.contact-item {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.contact-item:hover {
-    transform: scale(1.1);
-}
-
-.contact-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.footer-content p {
+    margin: 0;
 }
 
 /* Animations */
@@ -482,22 +461,7 @@ footer {
     h3{
         font-size: 1.5em;
     }
-
-    .contact-item {
-        width: 40px;
-        height: 40px;
-    }
     
-    .contact-options {
-        justify-content:center;
-    }
-    
-    #home::before {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
-
     #home .container {
         display: flex;
         flex-direction: column;
@@ -515,7 +479,6 @@ footer {
     }
     
     .side-by-side {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -534,10 +497,7 @@ footer {
     }
 
     footer {
-        padding: 0.15rem 2rem;
+        padding: 0.15rem 1rem;
     }
 
-    .footer-content p {
-        font-size: 0.9rem;
-    }
 }
