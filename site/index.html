@@ -65,6 +65,19 @@
         </div>
     </section>
 
+    <!-- Currently Section -->
+    <section id="currently" class="currently-section" aria-labelledby="currently-title">
+        <div class="currently-card">
+            <p class="currently-label">Current focus</p>
+            <h2 id="currently-title">Currently</h2>
+            <ul>
+                <li>Working in enterprise and program cybersecurity as an Information Systems Security Officer.</li>
+                <li>Completing an MS in Information Systems expected December 2026.</li>
+                <li>Building AWS expertise and pursuing certification.</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
@@ -360,7 +373,9 @@
 
         revealCards.forEach((card) => revealObserver.observe(card));
 
-        const observedSections = document.querySelectorAll('main section[id]:not(#home)');
+        const observedSections = Array.from(navLinks)
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) {
