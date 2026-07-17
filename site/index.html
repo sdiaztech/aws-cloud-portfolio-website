@@ -29,9 +29,13 @@
     <!-- Home Section -->
     <section id="home" class="section">
         <div class="container">
-            <h1 class="slide-in-left">Hey, I'm</h1>
-            <h2 class="slide-in-right">Samuel Diaz</h2>
-            <p class="slide-in-left">Software • Cybersecurity • Data Science</p>
+            <p class="hero-eyebrow slide-in-left"><span></span>Hey, I'm</p>
+            <h1 class="hero-name slide-in-right">Samuel Diaz</h1>
+            <p class="hero-focus slide-in-left" aria-label="Software, Cybersecurity, and Data Science">
+                <span>Software</span>
+                <span>Cybersecurity</span>
+                <span>Data Science</span>
+            </p>
         </div>
     </section>
 
@@ -53,7 +57,7 @@
                 <li><strong>Programming:</strong> Python, Java, SQL, JavaScript, C++, R, Bash, HTML, CSS, C#</li>
                 <li><strong>Development:</strong> Agile, Docker, Git, GitLab, .NET, Jira, Confluence, React, VS Code, Jenkins CI/CD, SDLC</li>
                 <li><strong>Data Science:</strong> Excel, Matplotlib, MySQL Workbench, Pandas, RStudio</li>
-                <li><strong>Cloud & Platforms:</strong>AWS, Google Cloud, macOS, RHEL 8, Ubuntu, Windows</li>
+                <li><strong>Cloud &amp; Platforms:</strong>AWS, Google Cloud, macOS, RHEL 8, Ubuntu, Windows</li>
                 <li><strong>Systems Engineering:</strong> Systems Architecture, Network and Data Flow Diagrams, Requirements Analysis, Configuration Management, System Integration Laboratory (SIL)</li>
                 <li><strong>Cybersecurity:</strong>RMF, ATO, NIST SP 800-53, NIST SP 800-171, CMMC Level 2, DoD STIGs, SSPs, Governance</li>
             </ul>
@@ -64,28 +68,42 @@
     <section id="experience" class="section">
         <div class="container">
             <h3>Professional Experience</h3>
-            <h4>Programs Management Analytics & Technologies (PMAT)</h4>
-            <p class="experience-location">San Diego, CA</p>
-            <h5>Information Systems Security Officer (ISSO) | Mar 2026 - Present</h5>
-            <p class="experience-subheading">Enterprise Cybersecurity</p>
-            <ul>
-                <li>Supported organizational CMMC Level 2 compliance efforts.</li>
-                <li>Revised cybersecurity policies aligning with NIST SP 800-171.</li>
-                <li>Developed network and data flow diagrams for enterprise systems.</li>
-            </ul>
-            <p class="experience-subheading">Ship Self Defense System (SSDS)</p>
-            <ul>
-                <li>Conducted 300+ RMF security control assessments.</li>
-                <li>Identified and coordinated remediation of 20+ security deficiencies.</li>
-                <li>Utilized security assessment tools to validate security findings.</li>
-            </ul>
-            <h5>Software Engineer | May 2023 - Mar 2026</h5>
-            <p class="experience-subheading">Ship Self Defense System (SSDS)</p>
-            <ul>
-                <li>Maintained combat system software for the Navy’s Ship Self Defense System.</li>
-                <li>Resolved 20+ software defects through debugging and root cause analysis.</li>
-                <li>Integrated 30+ code merges across multiple software baselines.</li>
-            </ul>
+            <div class="company-heading">
+                <h4>Programs Management Analytics &amp; Technologies (PMAT)</h4>
+                <p class="experience-location">San Diego, CA</p>
+            </div>
+            <div class="company-roles">
+                <div class="role-entry">
+                    <h5 class="job-heading">
+                        <span class="job-title">Information Systems Security Officer (ISSO)</span>
+                        <span class="job-date">Mar 2026 – Present</span>
+                    </h5>
+                    <p class="experience-subheading">Enterprise Cybersecurity</p>
+                    <ul>
+                        <li>Supported organizational CMMC Level 2 compliance efforts.</li>
+                        <li>Revised cybersecurity policies aligning with NIST SP 800-171.</li>
+                        <li>Developed network and data flow diagrams for enterprise systems.</li>
+                    </ul>
+                    <p class="experience-subheading">Ship Self Defense System (SSDS)</p>
+                    <ul>
+                        <li>Conducted 300+ RMF security control assessments.</li>
+                        <li>Identified and coordinated remediation of 20+ security deficiencies.</li>
+                        <li>Utilized security assessment tools to validate security findings.</li>
+                    </ul>
+                </div>
+                <div class="role-entry">
+                    <h5 class="job-heading">
+                        <span class="job-title">Software Engineer</span>
+                        <span class="job-date">May 2023 – Mar 2026</span>
+                    </h5>
+                    <p class="experience-subheading">Ship Self Defense System (SSDS)</p>
+                    <ul>
+                        <li>Maintained combat system software for the Navy’s Ship Self Defense System.</li>
+                        <li>Resolved 20+ software defects through debugging and root cause analysis.</li>
+                        <li>Integrated 30+ code merges across multiple software baselines.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -93,7 +111,7 @@
     <section id="credentials" class="section">
         <div class="container">
             <div class="side-by-side">
-                <div class="education">
+                <div class="education reveal-card reveal-left">
                     <h3>Education</h3>
                     <ul>
                         <li>
@@ -111,7 +129,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="certifications">
+                <div class="certifications reveal-card reveal-right">
                     <h3>Professional Certifications</h3>
                     <ul>
                         <li><strong>Google Cloud Computing Foundations</strong>
@@ -138,55 +156,48 @@
     <section id="projects" class="section">
         <div class="container">
             <h3>Projects</h3>
-            <div class="project">
-                <h4>AWS Cloud Portfolio Website</h4>
-                <p>Designed, developed, and deployed a personal portfolio website on AWS with secure cloud configuration.</p>
-                <p><strong>Tech:</strong> HTML • CSS • Amazon S3 • CloudFront • Route 53 • IAM • CloudTrail</p>
-                <a href="https://github.com/sdiaztech/aws-cloud-portfolio-website" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
-            </div>
-            <hr>
-            <div class="project">
-                <h4>Package Delivery Route Optimization System</h4>
-                <p>Developed a Python application implementing the nearest neighbor algorithm to optimize package delivery routes.</p>
-                <p><strong>Tech:</strong> Python • Algorithms • Data Structures • Optimization</p>
-                <a href="https://github.com/sdiaztech/package-delivery-route-optimization-system" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
-            </div>
-            <hr>
-            <div class="project">
-                <h4>Customer Appointment Management System</h4>
-                <p>Developed a JavaFX desktop application with MySQL integration to manage customers, appointments, time zones, and scheduling conflicts.</p>
-                <p><strong>Tech:</strong> Java • JavaFX • MySQL • JDBC • SQL</p>
-                <a href="https://github.com/sdiaztech/customer-appointment-management-system" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
-            </div>
-
-            <hr>
-
-            <div class="project">
-                <h4>Customer Relationship Management System Design</h4>
-                <p>Designed a customer relationship management (CRM) system by developing software requirements, UML models, and system design documentation.</p>
-                <p><strong>Tech:</strong> UML • SDLC • Systems Analysis • Software Design</p>
-                <a href="https://github.com/sdiaztech/crm-system-design" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
-            </div>
-
-            <hr>
-
-            <div class="project">
-                <h4>Relational Database Design & SQL Development</h4>
-                <p>Designed and implemented normalized relational databases while developing SQL queries to support business reporting and data management.</p>
-                <p><strong>Tech:</strong> MySQL • SQL • ER Modeling • Database Design • Normalization</p>
-                <a href="https://github.com/sdiaztech/relational-database-design-and-sql-development" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+            <div class="project-grid">
+                <article class="project">
+                    <h4>AWS Cloud Portfolio Website</h4>
+                    <p>Designed, developed, and deployed a personal portfolio website on AWS with secure cloud configuration.</p>
+                    <p><strong>Tech:</strong> HTML • CSS • Amazon S3 • CloudFront • Route 53 • IAM • CloudTrail</p>
+                    <a href="https://github.com/sdiaztech/aws-cloud-portfolio-website" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                </article>
+                <article class="project">
+                    <h4>Package Delivery Route Optimization System</h4>
+                    <p>Developed a Python application implementing the nearest neighbor algorithm to optimize package delivery routes.</p>
+                    <p><strong>Tech:</strong> Python • Algorithms • Data Structures • Optimization</p>
+                    <a href="https://github.com/sdiaztech/package-delivery-route-optimization-system" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                </article>
+                <article class="project">
+                    <h4>Customer Appointment Management System</h4>
+                    <p>Developed a JavaFX desktop application with MySQL integration to manage customers, appointments, time zones, and scheduling conflicts.</p>
+                    <p><strong>Tech:</strong> Java • JavaFX • MySQL • JDBC • SQL</p>
+                    <a href="https://github.com/sdiaztech/customer-appointment-management-system" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                </article>
+                <article class="project">
+                    <h4>Customer Relationship Management System Design</h4>
+                    <p>Designed a customer relationship management (CRM) system by developing software requirements, UML models, and system design documentation.</p>
+                    <p><strong>Tech:</strong> UML • SDLC • Systems Analysis • Software Design</p>
+                    <a href="https://github.com/sdiaztech/crm-system-design" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                </article>
+                <article class="project">
+                    <h4>Relational Database Design &amp; SQL Development</h4>
+                    <p>Designed and implemented normalized relational databases while developing SQL queries to support business reporting and data management.</p>
+                    <p><strong>Tech:</strong> MySQL • SQL • ER Modeling • Database Design • Normalization</p>
+                    <a href="https://github.com/sdiaztech/relational-database-design-and-sql-development" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section">
         <div class="contact-card">
             <h3>Let’s Connect</h3>
             <p>Thanks for taking the time to explore my portfolio. For professional opportunities, feel free to reach out.</p>
             <div class="contact-links">
                 <a href="mailto:samdiaztech@gmail.com" class="btn">Email Me</a>
-                <!-- <a href="https://www.linkedin.com/in/samdiaztech" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a> -->
                 <a href="https://github.com/sdiaztech" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
             </div>
         </div>
@@ -194,30 +205,54 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <p>© 2026 Samuel Diaz</p>
-            <p>Last updated: July 2026</p>
-        </div>
+        <p>© 2026 Samuel Diaz</p>
+        <p>Last updated: July 2026</p>
     </footer>
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const siteNav = document.querySelector('.site-nav');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const closeMenu = () => {
+            siteNav.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open navigation menu');
+        };
 
         navToggle.addEventListener('click', () => {
             const isOpen = siteNav.classList.toggle('is-open');
             document.body.classList.toggle('menu-open', isOpen);
             navToggle.setAttribute('aria-expanded', isOpen);
             navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+
+            if (isOpen) {
+                navLinks[0].focus();
+            }
         });
 
-        document.querySelectorAll('.nav-links a').forEach((link) => {
-            link.addEventListener('click', () => {
-                siteNav.classList.remove('is-open');
-                document.body.classList.remove('menu-open');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navToggle.setAttribute('aria-label', 'Open navigation menu');
-            });
+        navLinks.forEach((link) => {
+            link.addEventListener('click', closeMenu);
         });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && siteNav.classList.contains('is-open')) {
+                closeMenu();
+                navToggle.focus();
+            }
+        });
+
+        const revealCards = document.querySelectorAll('.reveal-card');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        revealCards.forEach((card) => revealObserver.observe(card));
     </script>
 </body>
 </html>
