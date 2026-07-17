@@ -487,6 +487,7 @@ header {
     font-size: 1.55rem;
     line-height: 1.25;
     font-weight: 750;
+    text-align: left;
 }
 
 #experience .company-roles {
@@ -1017,6 +1018,15 @@ footer p {
         box-sizing: border-box;
     }
 
+    .credential-heading {
+        display: block;
+    }
+
+    .credential-date {
+        display: block;
+        margin-top: 0.15rem;
+    }
+
     #skills ul {
         grid-template-columns: 1fr;
     }
@@ -1048,6 +1058,52 @@ footer p {
         align-items: flex-start;
         flex-direction: column;
         gap: 0.25rem;
+    }
+
+    #experience .company-heading h3 {
+        font-size: 1.3rem;
+    }
+
+    #experience .experience-location {
+        font-size: 0.85rem;
+    }
+
+    #experience .job-title {
+        font-size: 1.1rem;
+    }
+
+    #experience .job-date {
+        font-size: 0.82rem;
+    }
+
+    #experience .company-roles {
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    #experience .role-entry::before {
+        left: calc(-1rem - 6px);
+    }
+
+    #experience .job-heading {
+        display: block;
+        padding-left: 0.5rem;
+    }
+
+    #experience .job-date {
+        display: block;
+        margin-top: 0.15rem;
+    }
+
+    #experience .experience-subheading {
+        padding-left: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    #experience ul {
+        margin-left: 0;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 
     footer {
