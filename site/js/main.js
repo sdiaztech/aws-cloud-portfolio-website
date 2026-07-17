@@ -2,18 +2,18 @@ const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.nav-links a');
 
-const closeMenu = () => {
-    siteNav.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Open navigation menu');
+const setMenuState = (isOpen) => {
+    siteNav.classList.toggle('is-open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
 };
 
+const closeMenu = () => setMenuState(false);
+
 navToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('is-open');
-    document.body.classList.toggle('menu-open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    const isOpen = !siteNav.classList.contains('is-open');
+    setMenuState(isOpen);
 
     if (isOpen) {
         navLinks[0].focus();
