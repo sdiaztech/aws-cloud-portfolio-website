@@ -30,8 +30,6 @@ body {
     color: var(--color-ink);
 }
 
-<<<<<<< HEAD
-=======
 .sr-only {
     position: absolute;
     width: 1px;
@@ -67,7 +65,6 @@ main:focus {
     outline: none;
 }
 
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 .section {
     padding: clamp(4rem, 8vw, 7rem) 1.25rem;
     text-align: center;
@@ -78,11 +75,7 @@ main:focus {
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
-h3 {
-=======
 h2 {
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.1;
     letter-spacing: -0.035em;
@@ -165,10 +158,7 @@ header {
 /* Home */
 #home {
     position: relative;
-<<<<<<< HEAD
-=======
     overflow: clip;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     min-height: 70vh;
     padding: 8rem 1.25rem;
     text-align: center;
@@ -367,11 +357,7 @@ header {
     margin-bottom: 0.5rem;
 }
 
-<<<<<<< HEAD
-#experience .company-heading h4 {
-=======
 #experience .company-heading h3 {
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     margin: 0;
     font-size: 1.55rem;
     line-height: 1.25;
@@ -387,15 +373,11 @@ header {
 
 #experience .role-entry {
     position: relative;
-<<<<<<< HEAD
-    padding: 0.75rem 0 1.5rem;
-=======
     padding: 0.75rem 0 0.5rem;
 }
 
 #experience .role-entry + .role-entry {
     padding-top: 0.5rem;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 }
 
 #experience .role-entry:last-child {
@@ -420,13 +402,10 @@ header {
     padding-left: 1rem;
     font-size: 0.95rem;
     text-align: left;
-<<<<<<< HEAD
-=======
 }
 
 #experience .role-entry ul:last-child {
     margin-bottom: 0;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 }
 
 #experience ul li {
@@ -446,8 +425,6 @@ header {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 .education h3,
 .certifications h3 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -456,7 +433,6 @@ header {
     margin: 0 0 2.5rem;
 }
 
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 .side-by-side {
     display: flex;
     justify-content: center;
@@ -540,14 +516,10 @@ header {
     text-align: left;
 }
 
-<<<<<<< HEAD
-#projects .project p:last-of-type {
-=======
 #projects .project-tech {
     padding: 0.65rem 0.8rem;
     background: var(--color-soft);
     border-radius: 10px;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     color: var(--color-muted);
     font-size: 0.88rem;
 }
@@ -564,20 +536,12 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-<<<<<<< HEAD
-.project h4 {
-=======
 .project h3 {
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     margin: 0;
     font-size: 1.2rem;
     text-align: left;
 }
 
-<<<<<<< HEAD
-.project .btn {
-    margin-top: auto;
-=======
 .project-link {
     margin-top: auto;
     color: var(--color-primary);
@@ -590,7 +554,6 @@ header {
     color: var(--color-primary-dark);
     text-decoration: underline;
     text-underline-offset: 0.25rem;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 }
 
 .project:hover {
@@ -598,13 +561,10 @@ header {
     box-shadow: var(--shadow);
 }
 
-<<<<<<< HEAD
-=======
 .projects-action {
     margin-top: 2rem;
 }
 
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 /* Contact */
 #contact {
     background: var(--color-surface);
@@ -620,11 +580,7 @@ header {
     box-shadow: var(--shadow);
 }
 
-<<<<<<< HEAD
-.contact-card h3 {
-=======
 .contact-card h2 {
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     margin-bottom: 1rem;
 }
 
@@ -637,11 +593,6 @@ header {
 .contact-links {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    gap: 0.75rem;
-    flex-wrap: wrap;
-=======
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
 }
 
 /* Footer */
@@ -650,17 +601,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-    gap: 2rem;
-    background: var(--color-surface);
-    color: var(--color-muted);
-    padding: 0.25rem 2rem;
-=======
     gap: 0.5rem;
     background: var(--color-surface);
     color: var(--color-muted);
     padding: 1rem 2rem;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
     font-size: 0.75rem;
     text-align: center;
 }
@@ -717,10 +661,7 @@ footer p {
 
     header {
         position: relative;
-<<<<<<< HEAD
-=======
         justify-content: flex-end;
->>>>>>> 667f783 (Enhance accessibility and SEO by adding meta tags, skip link, and improving heading structure; update styles for better layout and responsiveness; remove unused media files.)
         padding: 0.75rem 1rem;
         background: var(--color-dark);
         backdrop-filter: none;
