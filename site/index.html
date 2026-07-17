@@ -9,11 +9,13 @@
 <body>
     <!-- Navigation Pane -->
     <header>
-        <div class="logo">
-            <a href="#home">Samuel Diaz</a>
-        </div>
-        <nav>
-            <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="site-nav">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -197,5 +199,25 @@
             <p>Last updated: July 2026</p>
         </div>
     </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const siteNav = document.querySelector('.site-nav');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = siteNav.classList.toggle('is-open');
+            document.body.classList.toggle('menu-open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach((link) => {
+            link.addEventListener('click', () => {
+                siteNav.classList.remove('is-open');
+                document.body.classList.remove('menu-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Open navigation menu');
+            });
+        });
+    </script>
 </body>
 </html>
