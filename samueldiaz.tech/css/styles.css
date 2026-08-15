@@ -790,7 +790,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem 1.25rem;
+    row-gap: 1rem;
+}
+
+.contact-links .btn {
+    margin-right: 0.625rem;
+    margin-left: 0.625rem;
 }
 
 /* Footer */
