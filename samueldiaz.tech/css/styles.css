@@ -788,7 +788,9 @@ header {
 
 .contact-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 0 0.75rem;
 }
 
 /* Footer */
