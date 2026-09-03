@@ -742,6 +742,74 @@ header {
     transform: translateY(-4px);
 }
 
+/* Research */
+#research {
+    background: var(--soft-section-gradient);
+}
+
+.section-eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#research h2 {
+    margin-bottom: 2rem;
+}
+
+.research-entry {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    border-top: 1px solid rgba(37, 99, 235, 0.28);
+}
+
+.research-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem 0 1.25rem;
+}
+
+.research-meta {
+    margin: 0 0 0.4rem;
+    color: var(--color-primary-dark);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.research-heading h3 {
+    margin: 0;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    line-height: 1.2;
+}
+
+.research-heading time {
+    flex: 0 0 auto;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.research-list {
+    display: grid;
+    gap: 0.75rem;
+    list-style: disc;
+    margin: 0;
+    padding: 0 0 2rem 1.25rem;
+    color: #475569;
+}
+
+.research-list li::marker {
+    color: var(--color-primary);
+}
+
 /* Projects */
 #projects {
     background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
@@ -1134,6 +1202,12 @@ footer p {
 
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .research-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     #projects .project {
