@@ -88,8 +88,12 @@ const setActiveSection = (sectionId) => {
 };
 
 if (supportsIntersectionObserver) {
+    const sectionVisibility = new Map();
+
     const sectionObserver = new IntersectionObserver((entries) => {
-        const visibleSection = entries
+        entries.forEach((entry) => sectionVisibility.set(entry.target, entry));
+
+        const visibleSection = [...sectionVisibility.values()]
             .filter((entry) => entry.isIntersecting)
             .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
