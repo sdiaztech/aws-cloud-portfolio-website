@@ -371,20 +371,21 @@ header {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-}
-
-.skill-tags {
     gap: 0.45rem;
 }
 
+.skill-tags {
+    margin: 0;
+}
+
 .skill-tags span,
-.project-tech span {
+.project-tech li {
     display: inline-flex;
     align-items: center;
     padding: 0.32rem 0.62rem;
     color: #334155;
-    background: #eff6ff;
-    border: 1px solid #dbeafe;
+    background: var(--color-icon-bg);
+    border: 1px solid var(--color-icon-border);
     border-radius: 999px;
     font-size: 0.78rem;
     font-weight: 650;
@@ -741,17 +742,10 @@ header {
     font-weight: 700;
 }
 
-.research-list {
-    display: grid;
-    gap: 0.75rem;
-    list-style: disc;
+.research-description {
     margin: 0;
-    padding: 0 0 2rem 1.25rem;
+    padding: 0 0 2rem;
     color: #475569;
-}
-
-.research-list li::marker {
-    color: var(--color-primary);
 }
 
 /* Projects */
@@ -1242,5 +1236,12 @@ footer p {
     .reveal-card {
         opacity: 1;
         transform: none;
+    }
+
+    .slide-in-left,
+    .slide-in-right {
+        opacity: 1;
+        transform: none;
+        animation: none;
     }
 }
